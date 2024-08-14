@@ -1,0 +1,157 @@
+2024-08-14T12:09:52.900+09:00  WARN 9296 --- [restartedMain] EnvironmentDecryptApplicationInitializer : Cannot decrypt: key=spring.datasource.password
+2024-08-14T12:09:52.949+09:00 ERROR 9296 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Cannot decrypt: key=spring.datasource.password
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:158) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.lambda$decrypt$0(AbstractEnvironmentDecrypt.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at java.base/java.util.LinkedHashMap.replaceAll(LinkedHashMap.java:731) ~[na:na]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:131) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:70) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.EnvironmentDecryptApplicationInitializer.initialize(EnvironmentDecryptApplicationInitializer.java:95) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:605) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:385) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.mzc.eureka_server.EurekaServerApplication.main(EurekaServerApplication.java:13) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.UnsupportedOperationException: No decryption for FailsafeTextEncryptor. Did you configure the keystore correctly?
+	at org.springframework.cloud.bootstrap.encrypt.TextEncryptorUtils$FailsafeTextEncryptor.decrypt(TextEncryptorUtils.java:188) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:143) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	... 16 common frames omitted
+
+2024-08-14T12:10:21.906+09:00  WARN 5596 --- [restartedMain] EnvironmentDecryptApplicationInitializer : Cannot decrypt: key=spring.datasource.password
+2024-08-14T12:10:21.937+09:00 ERROR 5596 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Cannot decrypt: key=spring.datasource.password
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:158) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.lambda$decrypt$0(AbstractEnvironmentDecrypt.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at java.base/java.util.LinkedHashMap.replaceAll(LinkedHashMap.java:731) ~[na:na]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:131) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:70) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.EnvironmentDecryptApplicationInitializer.initialize(EnvironmentDecryptApplicationInitializer.java:95) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:605) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:385) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.mzc.eureka_server.EurekaServerApplication.main(EurekaServerApplication.java:13) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.UnsupportedOperationException: No decryption for FailsafeTextEncryptor. Did you configure the keystore correctly?
+	at org.springframework.cloud.bootstrap.encrypt.TextEncryptorUtils$FailsafeTextEncryptor.decrypt(TextEncryptorUtils.java:188) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.bootstrap.encrypt.AbstractEnvironmentDecrypt.decrypt(AbstractEnvironmentDecrypt.java:143) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	... 16 common frames omitted
+
+2024-08-14T12:12:09.894+09:00  INFO 13620 --- [restartedMain] c.m.e.EurekaServerApplication            : The following 1 profile is active: "dev"
+2024-08-14T12:12:10.962+09:00  INFO 13620 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7c8524a4-f952-357d-b40b-9b427d48e20e
+2024-08-14T12:12:11.384+09:00  INFO 13620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2024-08-14T12:12:11.400+09:00  INFO 13620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-14T12:12:11.401+09:00  INFO 13620 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-08-14T12:12:11.484+09:00  INFO 13620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-14T12:12:11.485+09:00  INFO 13620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
+2024-08-14T12:12:12.593+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2024-08-14T12:12:12.597+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2024-08-14T12:12:12.864+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2024-08-14T12:12:12.865+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2024-08-14T12:12:14.678+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:12:15.058+09:00  WARN 13620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-14T12:12:16.248+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:12:16.268+09:00  INFO 13620 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-08-14T12:12:16.312+09:00  WARN 13620 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-14T12:12:16.340+09:00  INFO 13620 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-08-14T12:12:16.393+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-08-14T12:12:16.393+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2024-08-14T12:12:16.405+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1723605136403 with initial instances count: 0
+2024-08-14T12:12:16.452+09:00  INFO 13620 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2024-08-14T12:12:16.457+09:00  WARN 13620 --- [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2024-08-14T12:12:16.479+09:00  INFO 13620 --- [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2024-08-14T12:12:16.481+09:00  INFO 13620 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2024-08-14T12:12:16.495+09:00  INFO 13620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-14T12:12:16.587+09:00  INFO 13620 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+2024-08-14T12:12:16.603+09:00  INFO 13620 --- [Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2024-08-14T12:12:16.605+09:00  INFO 13620 --- [Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2024-08-14T12:12:16.605+09:00  INFO 13620 --- [Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2024-08-14T12:12:16.606+09:00  INFO 13620 --- [Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2024-08-14T12:12:16.606+09:00  INFO 13620 --- [Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2024-08-14T12:12:16.617+09:00  INFO 13620 --- [Thread-14] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2024-08-14T12:12:16.622+09:00  INFO 13620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2024-08-14T12:12:16.624+09:00  INFO 13620 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2024-08-14T12:12:17.787+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:12:17.830+09:00  INFO 13620 --- [restartedMain] c.m.e.EurekaServerApplication            : Started EurekaServerApplication in 17.722 seconds (process running for 18.403)
+2024-08-14T12:12:29.366+09:00  INFO 13620 --- [http-nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-14T12:12:29.367+09:00  INFO 13620 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-14T12:12:29.369+09:00  INFO 13620 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-14T12:13:16.609+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:14:16.608+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:15:16.608+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:16:16.609+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:17:16.609+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:17:20.820+09:00  INFO 13620 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-14T12:17:20.823+09:00  INFO 13620 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKA-SERVER with eureka with status DOWN
+2024-08-14T12:17:20.839+09:00  INFO 13620 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-14T12:17:20.841+09:00  INFO 13620 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-08-14T12:17:20.852+09:00  INFO 13620 --- [Thread-1] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2024-08-14T12:17:20.859+09:00  INFO 13620 --- [Thread-1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2024-08-14T12:17:20.871+09:00  INFO 13620 --- [Thread-1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2024-08-14T12:17:20.872+09:00  INFO 13620 --- [Thread-1] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2024-08-14T12:17:20.873+09:00  INFO 13620 --- [Thread-1] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2024-08-14T12:17:20.896+09:00  INFO 13620 --- [Thread-1] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2024-08-14T12:17:20.905+09:00  INFO 13620 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-08-14T12:17:20.906+09:00  INFO 13620 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-08-14T12:17:25.254+09:00  INFO 13620 --- [restartedMain] c.m.e.EurekaServerApplication            : The following 1 profile is active: "dev"
+2024-08-14T12:17:25.676+09:00  INFO 13620 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7c8524a4-f952-357d-b40b-9b427d48e20e
+2024-08-14T12:17:25.728+09:00  INFO 13620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2024-08-14T12:17:25.729+09:00  INFO 13620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-14T12:17:25.730+09:00  INFO 13620 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-08-14T12:17:25.754+09:00  INFO 13620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-14T12:17:25.755+09:00  INFO 13620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 497 ms
+2024-08-14T12:17:25.977+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2024-08-14T12:17:25.978+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2024-08-14T12:17:25.978+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2024-08-14T12:17:25.979+09:00  INFO 13620 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2024-08-14T12:17:27.212+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:17:27.296+09:00  WARN 13620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-14T12:17:28.457+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:17:28.461+09:00  INFO 13620 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-08-14T12:17:28.482+09:00  WARN 13620 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-14T12:17:28.492+09:00  INFO 13620 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-08-14T12:17:28.493+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-08-14T12:17:28.493+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2024-08-14T12:17:28.493+09:00  INFO 13620 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1723605448493 with initial instances count: 0
+2024-08-14T12:17:28.496+09:00  INFO 13620 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2024-08-14T12:17:28.496+09:00  WARN 13620 --- [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2024-08-14T12:17:28.498+09:00  INFO 13620 --- [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2024-08-14T12:17:28.500+09:00  INFO 13620 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2024-08-14T12:17:28.508+09:00  INFO 13620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-14T12:17:28.540+09:00  INFO 13620 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+2024-08-14T12:17:28.542+09:00  INFO 13620 --- [Thread-28] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2024-08-14T12:17:28.544+09:00  INFO 13620 --- [Thread-28] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2024-08-14T12:17:28.544+09:00  INFO 13620 --- [Thread-28] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2024-08-14T12:17:28.544+09:00  INFO 13620 --- [Thread-28] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2024-08-14T12:17:28.545+09:00  INFO 13620 --- [Thread-28] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2024-08-14T12:17:28.546+09:00  INFO 13620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2024-08-14T12:17:28.547+09:00  INFO 13620 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2024-08-14T12:17:28.550+09:00  INFO 13620 --- [Thread-28] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2024-08-14T12:17:29.717+09:00  INFO 13620 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-08-14T12:17:29.727+09:00  INFO 13620 --- [restartedMain] c.m.e.EurekaServerApplication            : Started EurekaServerApplication in 8.777 seconds (process running for 330.301)
+2024-08-14T12:17:29.731+09:00  INFO 13620 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-14T12:18:28.547+09:00  INFO 13620 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2024-08-14T12:19:13.565+09:00  INFO 13620 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-14T12:19:13.567+09:00  INFO 13620 --- [Thread-15] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKA-SERVER with eureka with status DOWN
+2024-08-14T12:19:13.593+09:00  INFO 13620 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-14T12:19:13.606+09:00  INFO 13620 --- [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2024-08-14T12:19:13.609+09:00  INFO 13620 --- [Thread-15] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2024-08-14T12:19:13.612+09:00  INFO 13620 --- [Thread-15] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2024-08-14T12:19:13.613+09:00  INFO 13620 --- [Thread-15] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2024-08-14T12:19:13.614+09:00  INFO 13620 --- [Thread-15] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2024-08-14T12:19:13.616+09:00  INFO 13620 --- [Thread-15] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2024-08-14T12:19:13.620+09:00  INFO 13620 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-08-14T12:19:13.623+09:00  INFO 13620 --- [Thread-15] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
